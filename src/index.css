@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 186 100% 49%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 263 86% 52%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 186 100% 49%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 186 100% 49%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 186 100% 49%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 186 100% 49%;
+
+    /* Custom neon tokens */
+    --neon-cyan: 186 100% 49%;
+    --neon-purple: 263 86% 52%;
+    --neon-cyan-glow: 0 0 10px hsl(186 100% 49% / 0.5), 0 0 30px hsl(186 100% 49% / 0.2);
+    --neon-purple-glow: 0 0 10px hsl(263 86% 52% / 0.5), 0 0 30px hsl(263 86% 52% / 0.2);
+    --glass-bg: hsl(0 0% 100% / 0.03);
+    --glass-border: hsl(0 0% 100% / 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-cyan-500/30 selection:text-cyan-100;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Orbitron', monospace;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-glow-cyan {
+    text-shadow: var(--neon-cyan-glow);
+  }
+
+  .text-glow-purple {
+    text-shadow: var(--neon-purple-glow);
+  }
+
+  .box-glow-cyan {
+    box-shadow: var(--neon-cyan-glow);
+  }
+
+  .box-glow-purple {
+    box-shadow: var(--neon-purple-glow);
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-purple)));
+  }
+
+  .neon-line {
+    background: linear-gradient(90deg, transparent, hsl(var(--neon-cyan)), transparent);
+    height: 1px;
+    box-shadow: 0 0 10px hsl(var(--neon-cyan) / 0.5);
+  }
+
+  .cyber-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(0 0% 2%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--neon-cyan) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--neon-cyan) / 0.5);
+  }
+}
+
+/* Glitch effect */
+@keyframes glitch-1 {
+
+  0%,
+  100% {
+    clip-path: inset(0 0 95% 0);
+    transform: translate(-2px, 0);
+  }
+
+  20% {
+    clip-path: inset(30% 0 40% 0);
+    transform: translate(2px, 0);
+  }
+
+  40% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translate(-1px, 0);
+  }
+
+  60% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(1px, 0);
+  }
+
+  80% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-2px, 0);
+  }
+}
+
+@keyframes glitch-2 {
+
+  0%,
+  100% {
+    clip-path: inset(95% 0 0 0);
+    transform: translate(2px, 0);
+  }
+
+  20% {
+    clip-path: inset(40% 0 30% 0);
+    transform: translate(-2px, 0);
+  }
+
+  40% {
+    clip-path: inset(10% 0 60% 0);
+    transform: translate(1px, 0);
+  }
+
+  60% {
+    clip-path: inset(70% 0 10% 0);
+    transform: translate(-1px, 0);
+  }
+
+  80% {
+    clip-path: inset(5% 0 80% 0);
+    transform: translate(2px, 0);
+  }
+}
+
+.animate-glitch-1 {
+  animation: glitch-1 2.5s infinite linear alternate-reverse;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 3s infinite linear alternate-reverse;
+}

@@ -42,7 +42,7 @@ export default function Footer() {
       {/* Large Watermark */}
       <div className="absolute -bottom-10 left-0 w-full text-center pointer-events-none opacity-[0.02]">
         <span className="font-display font-bold text-[15vw] leading-none text-white tracking-widest">
-          NEXUS
+          CYBERTHON
         </span>
       </div>
     </footer>

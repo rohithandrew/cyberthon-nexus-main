@@ -14,10 +14,12 @@ export default function Hero() {
           </div>
         }
       >
-        <Spline
-          className="absolute inset-0 w-full h-full"
-          scene="https://prod.spline.design/BEPIZ2CNvmSJIlH3/scene.splinecode"
-        />
+        <div className="absolute inset-0 pointer-events-none">
+          <Spline
+            className="w-full h-full"
+            scene="https://prod.spline.design/BEPIZ2CNvmSJIlH3/scene.splinecode"
+          />
+        </div>
       </Suspense>
     </section>
   );

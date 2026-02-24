@@ -7,8 +7,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           <div>
-            <div className="font-display text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-wider mb-6">
+            <div className="font-display text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-wider mb-2">
               CYBERTHON 26
+            </div>
+            <div className="font-mono text-[10px] text-cyan-400 tracking-[0.3em] mb-6">
+              A CCEE INITIATIVE
             </div>
 
             <div className="flex flex-wrap gap-8 mb-8">
@@ -20,7 +23,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-white/20 font-mono">
-              © 2026 CYBERTHON INITIATIVE. ALL SYSTEMS OPERATIONAL.
+              © 2026 CENTRE FOR CYBERSECURITY EXCELLENCE AND EMPOWERMENT. ALL SYSTEMS OPERATIONAL.
             </p>
           </div>
 

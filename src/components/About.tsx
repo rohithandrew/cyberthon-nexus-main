@@ -42,9 +42,10 @@ export default function About() {
             <div className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed">
               <p>
                 <strong className="text-white">Cyberthon 26</strong> isn't just a hackathon; it's a convergence of the brightest minds in security and engineering.
-                For 48 hours, the boundaries of reality dissolve as you code, break, and build the future.
+                Organized by the <span className="text-cyan-400 font-medium text-glow-cyan">Centre for Cybersecurity Excellence and Empowerment (CCEE)</span>, this event pushes the boundaries of digital innovation.
               </p>
               <p>
+                For 48 hours, the boundaries of reality dissolve as you code, break, and build the future.
                 From <span className="text-cyan-400">zero-day exploits</span> to <span className="text-purple-400">quantum-resistant encryption</span>,
                 this is your arena to showcase skills that define the next generation of cyber defense.
               </p>

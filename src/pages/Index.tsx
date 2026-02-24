@@ -4,6 +4,7 @@ import About from "../components/About";
 import Tracks from "../components/Tracks";
 import Timeline from "../components/Timeline";
 import Sponsors from "../components/Sponsors";
+import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Tracks />
       <Timeline />
       <Sponsors />
+      <Gallery />
       <Contact />
       <Footer />
     </main>

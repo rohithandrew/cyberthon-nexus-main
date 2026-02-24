@@ -7,6 +7,7 @@ const links = [
   { label: "Tracks", href: "#tracks" },
   { label: "Timeline", href: "#timeline" },
   { label: "Sponsors", href: "#sponsors" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -38,7 +39,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="group relative flex items-center gap-2 font-display text-xl md:text-2xl font-bold tracking-wider text-white">
             <Terminal className="text-cyan-400 group-hover:animate-pulse" />
-            <span className="relative z-10">C26<span className="text-cyan-400">.CYBERTHON</span></span>
+            <span className="relative z-10">CCEE<span className="text-cyan-400">.CYBERTHON</span></span>
           </a>
 
           {/* Desktop Links */}
